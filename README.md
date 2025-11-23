@@ -38,7 +38,7 @@ analysis.
 
 -   Python\
 -   OpenCV\
--   Deep Learning / CNN models\
+-   Deep Learning (CNN / LSTM / 3D-CNN / Transformer Model)\
 -   NumPy & Pandas\
 -   Streamlit / django 
 
@@ -84,19 +84,6 @@ video_classification/
     └── confirm_delete.html        ← Delete Confirmation Page
 
 ```
-
-
-------------------------------------------------------------------------
-
-## 🧩 How It Works
-
-1.  The system takes input from video files.
-2.  Frames are processed and analyzed using a trained model.
-3.  Suspicious actions are identified based on movement patterns &
-    object interaction.
-4.  Alerts or visual indicators are displayed.
-5.  Outputs are used to support security decision-making.
-
 ------------------------------------------------------------------------
 
 ## ▶️ Installation & Usage
