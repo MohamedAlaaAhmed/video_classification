@@ -48,15 +48,41 @@ analysis.
 
 ``` bash
 
-    ├── data/                  # Dataset or video samples
-    ├── models/                # Trained model files
-    ├── src/                   
-    │   ├── detection.py       # Core detection logic
-    │   ├── utils.py           # Helper functions
-    │   ├── preprocess.py      # Preprocessing pipeline
-    ├── app.py                 # Deployment script
-    ├── requirements.txt       # Libraries and dependencies
-    └── README.md              # Project documentation
+video_classification/
+│
+├── manage.py
+├── db.sqlite3
+├── requirements.txt
+│
+├── video_classifier_web/          ← Main Django Project
+│   ├── __init__.py
+│   ├── settings.py                ← Django Configuration
+│   ├── urls.py                    ← Project-level URL Router
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── classifier/                    ← Main Application (App)
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py                   ← Video Upload Form
+│   ├── models.py                  ← Video Database Model
+│   ├── urls.py                    ← App-level URL Routing
+│   ├── utils.py                   ← AI Model Prediction Logic
+│   ├── views.py                   ← App Logic (Upload–List–Play–Delete)
+│   └── migrations/
+│       └── 0001_initial.py
+│
+├── media/                         ← Uploaded Video Files
+│   └── videos/
+│       └── (user uploaded videos)
+│
+└── templates/                     ← Front-End HTML Templates
+    ├── upload.html                ← Video Upload Page
+    ├── video_list.html            ← All Videos + Filtering
+    ├── video_detail.html          ← Single Video Player
+    └── confirm_delete.html        ← Delete Confirmation Page
+
 ```
 
 
